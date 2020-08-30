@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import SideBar from '../components/SideBar/index'
 import Scroll from '../components/Scroll'
+import Project from '../components/portfolio/Project'
+import allProjects from '../components/projects'
 export default function Home() {
  const sections = [
   {id: 'top', name: 'intro', icon: 'fa-home' },
@@ -9,7 +11,9 @@ export default function Home() {
   { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
 
 ] 
-  return (
+
+console.log(allProjects)
+return (
     <>
       <SideBar sections={sections} />
          <div id="main">
@@ -17,7 +21,7 @@ export default function Home() {
         <div className="container">
           <header>
             <h2 className="alt">
-              Hi! I'm <strong>Anubhav</strong>
+              Hi! I'm <strong>Expedito</strong>
               <br />
               Web developer
             </h2>
@@ -41,29 +45,15 @@ export default function Home() {
           </header>
 
           <p>
-            Life will feel it is always a great need for eu valley, the valley
-            CNN ridiculous smile at any time chat mainstream clinical homes.
-            Mauris floor was very warm and we need it. One customer now nibh
-            Bureau dark pools behavior.
+            Coding is bringing new ideas to life, to make the world better one line at a time. Here I showcase
+            my tries to make a difference;
           </p>
 
           <div className="row">
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                </a>
-                <header>
-                  <h3>Ipsum Feugiat</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                </a>
-                <header>
-                  <h3>Rhoncus Semper</h3>
-                </header>
-              </article>
-            </div>
+            {allProjects.map(proj => (
+              <Project key={proj.title} title={proj.title} subtitle={proj.subtitle} image={proj.image}/>
+
+            ))}
             <div className="col-4 col-12-mobile">
               <article className="item">
                 <a href="/#" className="image fit">

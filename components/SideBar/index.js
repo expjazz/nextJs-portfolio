@@ -17,7 +17,7 @@ const StyledSideNav = styled.div`
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 375px;
+;
 
 		.top {
       flex-grow: 1;
