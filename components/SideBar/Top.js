@@ -40,11 +40,16 @@ const StyledLogo = styled.div`
 
 const Top = () => {
   return (
-    <StyledLogo>
+    <StyledLogo id="logo">
      <Link href='/'>
+       <>
       <span className='image'>
         <img src="logo.png" alt=""/> 
-      </span>   
+      </span>  
+
+        <h1 id="title">Expedito Andrade</h1>
+        <p>Full Stack Developer</p> 
+        </>
      </Link> 
     </StyledLogo>
   )
