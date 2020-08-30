@@ -8,9 +8,10 @@ const StyledRight = styled.div`
   align-content: center;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   a {
 
-
+    display: flex;
   }
 
   .icon {
@@ -107,11 +108,10 @@ const StyledRight = styled.div`
     height: 70%;
 }
 
-
 `
 
 
-const ProjPic = ({image}) => {
+const ProjPic = ({image, stack}) => {
   return (
     <StyledRight className="item">
       <div className="iconsProj">
@@ -139,7 +139,7 @@ const ProjPic = ({image}) => {
       <div className="bCont">
 
             <div className="bottom">
-                <p>here</p>
+  <p>{stack}</p>
             </div>
       </div>
 

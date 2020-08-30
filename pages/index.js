@@ -51,7 +51,7 @@ return (
 
           <div className="row">
             {allProjects.map(proj => (
-              <Project key={proj.title} title={proj.title} subtitle={proj.subtitle} image={proj.image}/>
+              <Project key={proj.title} title={proj.title} subtitle={proj.subtitle} image={proj.image} stack={proj.stack} />
 
             ))}
             <div className="col-4 col-12-mobile">

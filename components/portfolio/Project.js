@@ -5,8 +5,17 @@ import { motion } from 'framer-motion';
 
 const StyledProject = styled.div`
   display: flex;
+  height: 100%; 
+  .one {
+    background: white;
+  }
+  
   .a {
     display: flex;
+  }
+
+  .h100 {
+    height: 100%;
   }
   .item {
     width: 50%;
@@ -19,16 +28,18 @@ const StyledProject = styled.div`
   }
   
 `
-const Project = ({title, subtitle, image}) => {
+const Project = ({title, stack, subtitle, image}) => {
   console.log(image)
   return (
 
     <StyledProject  className="col-6 col-12-mobile">
-      <motion.div className="a"
-      whileHover={{scale: 1.07, translateY: -20, boxShadow: '0px 0px 8px rgb(255,255,255)'}}
-      >
+      <motion.div 
+      whileHover={{scale: 1.07, translateY: -20, boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px'}}>
 
-    <article className="item one">
+        <div className="a">
+
+
+    <article className="item one h100">
       <a href="/#" className="image fit">
       </a>
       <header>
@@ -38,7 +49,8 @@ const Project = ({title, subtitle, image}) => {
         <h3 className='subtitle'>{subtitle}</h3>
       </header>
     </article>
-    <ProjPic image={image} />
+    <ProjPic image={image} stack={stack} />
+        </div>
       </motion.div>
   </StyledProject >
   )
