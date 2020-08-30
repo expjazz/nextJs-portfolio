@@ -81,7 +81,29 @@ const StyledRight = styled.div`
   left: 0;
   top: 40%;
 }
-
+.bCont {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: flex-end
+}
+.bottom {
+    box-sizing: border-box;
+    min-width: 0px;
+    
+    background-color: #222629;
+    color: white;
+    display: inline;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    right: 0px;
+    bottom: 0px;
+    clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin: 0px;
+    padding: 10px 10px 10px 20px;
+    height: 70%;
+}
 
 
 `
@@ -106,8 +128,14 @@ const ProjPic = ({image}) => {
       </div>
       <a href="/#" className="image fit">
         <img src={image} alt=""/>
+      
       </a>
-        <p>here</p>
+      <div className="bCont">
+
+            <div className="bottom">
+                <p>here</p>
+            </div>
+      </div>
 
     </StyledRight>
   )
