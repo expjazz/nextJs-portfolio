@@ -1,9 +1,10 @@
 import React from 'react'
+import Top from './Top'
 
 const index = () => {
   return (
     <div>
-     Hey 
+     <Top />
     </div>
   )
 }
