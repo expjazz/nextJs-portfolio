@@ -25,7 +25,7 @@ const Project = ({title, subtitle, image}) => {
 
     <StyledProject  className="col-6 col-12-mobile">
       <motion.div className="a"
-      whileHover={{scale: 1.07, translateY: -20}}
+      whileHover={{scale: 1.07, translateY: -20, boxShadow: '0px 0px 8px rgb(255,255,255)'}}
       >
 
     <article className="item one">

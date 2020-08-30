@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 const StyledRight = styled.div`
   display: flex;
   flex-direction: column;
@@ -122,8 +124,12 @@ const ProjPic = ({image}) => {
           </div>
         </div>
         <div className="fonts icons">
-        <span className="icon fa-github"></span>
-        <span className="icon fa-globe"></span>
+        <motion.span className="icon fa-github"
+        whileHover={{color: '#e27689'}} transition={{stype: 'spring', stiffness: 300}}
+        ></motion.span>
+        <motion.span 
+        whileHover={{color: '#e27689'}}
+        className="icon fa-globe"></motion.span>
         </div>
       </div>
       <a href="/#" className="image fit">
