@@ -32,7 +32,7 @@ const StyledNav = styled.nav`
 					text-decoration: none;
 					outline: 0;
 					border: 0;
-					@include vendor('transition', 'none');
+					transition: none;
 
 					span {
 						position: relative;
@@ -57,28 +57,31 @@ const StyledNav = styled.nav`
 
 `
 
-const Nav = ({ sections = [] }) => {
+const Nav = ({ sections }) => {
+  console.log(sections.map(id => id.id))
   return (
     <StyledNav id="nav">
       <ul>
         <Scrollspy
           items={sections.map(s => s.id)}
-          currentClassName='active'
-          offset={-300} 
+          currentClassName="active"
         >
-          {sections.map(s =>  {
+          {sections.map(s => {
             return (
-              <Scroll type='id' element={s.id}>
-                <a href={`#${s.id}`} id="top-link">
-            <span className={`icon ${s.icon}`}>{s.name}</span>
-                </a>
-              </Scroll>
-            )
+              <li key={s.id}>
+                
+                <Scroll type="id" element={s.id}>
+                  <a href={`#${s.id}`} id="top-link">
+                    <span className={`icon ${s.icon}`}>{s.name}</span>
+                  </a>
+                </Scroll>
+              </li>
+            );
           })}
         </Scrollspy>
       </ul>
-    </StyledNav>
-  )
-}
-
+      </StyledNav>
+      )
+    }
+    
 export default Nav

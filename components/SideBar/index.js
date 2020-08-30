@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import Top from './Top'
 import Nav from './Nav'
 import styled from 'styled-components'
-
+import TopNav from './TopNav'
 const StyledSideNav = styled.div`
 #header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-		@include vendor('display', 'flex');
 		background: #222629 url('overlay.png');
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 		color: #fff;
@@ -50,12 +49,15 @@ const StyledSideNav = styled.div`
 
 
 `
-const index = ({sections = []}) => {
+const index = ({sections}) => {
   const [headerOpen, toggleHeader] = useState(false);
 
   return (
     < StyledSideNav className={`${headerOpen ? 'header-visible' : ' '}`}>
-
+      <TopNav
+        title='Expedito Andrade'
+        onMenuClick={() => toggleHeader(!headerOpen)}
+      />
       <div id="header">
         <div className="top">
           <Top

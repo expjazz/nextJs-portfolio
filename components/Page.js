@@ -40,11 +40,83 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: ${theme.blackBlue}
   }
+
+  .image {
+		display: inline-block;
+		border: 0;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&.avatar48 {
+			width: 48px;
+			height: 48px;
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		&.fit {
+			display: block;
+			width: 100%;
+		}
+
+		&.featured {
+			display: block;
+			width: 100%;
+			margin: 0 0 2em 0;
+		}
+
+		&.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+
+		&.centered {
+			display: block;
+			margin: 0 0 2em 0;
+
+			img {
+				margin: 0 auto;
+				width: auto;
+			}
+		}
+	}
+
 `;
 
 const StyledPage = styled.div`
   background: ${(props) => props.theme.white};
   color: black;
+  	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		position: relative;
+		display: inline-block;
+		border-radius: 0.35em;
+		color: #fff !important;
+		text-decoration: none;
+		padding: 0.75em 2.5em 0.75em 2.5em;
+		background-color: #8ebebc;
+		border: 0;
+		cursor: pointer;
+		@include vendor('background-image', ('linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))', 'url("../images/overlay.png")'));
+		@include vendor('transition', 'background-color 0.35s ease-in-out');
+
+		&:hover {
+			background-color: #9ececc;
+		}
+
+		&:active {
+			background-color: #7eaeac;
+		}
+	}
 `;
 
 const Inner = styled.div`

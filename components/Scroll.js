@@ -8,9 +8,22 @@ const Scroll = (props) => {
   useEffect(() => {
     smoothscroll.polyfill();
   })
-
+  const scrollTo = (element, offSet = 0, timeout = null) => {
+    const elemPos = element ? element.getBoundingClientRect().top + window.pageYOffset : 0;
+    if (timeout) {
+      setTimeout(() => {
+        window.scroll({top: elemPos +{ offSet, left: 0, behavior: 'smooth'}, timeout})
+      })
+    } else {
+        window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
+    }
+  }
+  
   const handleClick = (e) => {
+    console.log('here')
     e.preventDefault();
+
+    
     let elem = 0;
     let scroll = true;
     const { type, element, offset, timeout } = props;
@@ -29,16 +42,7 @@ const Scroll = (props) => {
     scroll ? scrollTo(elem, offset, timeout) : console.log('element not found');
     
     }
-    const scrollTo = (element, offSet = 0, timeout = null) => {
-      const elemPos = element ? element.getBoundingClientRect().top + window.pageYOffset : 0;
-      if (timeout) {
-        setTimeout(() => {
-          window.scroll({top: elemPos +{ offSet, left: 0, behavior: 'smooth'}, timeout})
-        })
-      } else {
-          window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
-      }
-    }
+
   }
   return (
       <Element>

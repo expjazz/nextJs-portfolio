@@ -29,9 +29,7 @@ const StyledLogo = styled.div`
 			position: absolute;
 			left: 0;
 			top: 0;
-      img {
-        height: 128px;
-      }
+
 		}
 	
 `
@@ -43,8 +41,8 @@ const Top = () => {
     <StyledLogo id="logo">
      <Link href='/'>
        <>
-      <span className='image'>
-        <img src="logo.png" alt=""/> 
+      <span className='image avatar48'>
+        <img src="logo.png" height="128px" alt=""/> 
       </span>  
 
         <h1 id="title">Expedito Andrade</h1>
