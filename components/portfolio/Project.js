@@ -39,7 +39,8 @@ const Project = ({title, stack, subtitle, image}) => {
 
     <StyledProject  className="col-12">
           <motion.div 
-         whileHover={{scale: 1.07, translateY: -20, boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px'}}>
+         whileHover={{scale: 1.03, translateY: -20, boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px'}} transition={{duration: 0.7}}>
+
      
 
         <div className="a">
