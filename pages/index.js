@@ -4,6 +4,7 @@ import Scroll from '../components/Scroll'
 import allProjects from '../components/projects'
 import dynamic from 'next/dynamic'
 import Project from '../components/portfolio/Project'
+import Me from '../components/Me'
 
 export default function Home() {
  const sections = [
@@ -14,22 +15,19 @@ export default function Home() {
 
 ] 
 
-console.log(allProjects)
+
 return (
     <>
       <SideBar sections={sections} />
          <div id="main">
       <section id="top" className="one dark cover">
         <div className="container">
-          <header>
-            <h2 className="alt">
-              Hi! I'm <strong>Expedito</strong>
-              <br />
-              Web developer
-            </h2>
-            <p>I have made few things check it out.</p>
-          </header>
-
+        <h2 className="alt">
+      Hi! I'm <strong>Expedito</strong>
+      <br />
+      Web developer
+    </h2>
+    <p>I have made few things check it out.</p>
           <footer>
             <Scroll type="id" element={'portfolio'}>
               <a href="#portfolio" className="button">
