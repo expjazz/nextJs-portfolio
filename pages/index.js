@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import SideBar from '../components/SideBar/index'
 import Scroll from '../components/Scroll'
-import Project from '../components/portfolio/Project'
 import allProjects from '../components/projects'
+import dynamic from 'next/dynamic'
+import Project from '../components/portfolio/Project'
+
 export default function Home() {
  const sections = [
   {id: 'top', name: 'intro', icon: 'fa-home' },
@@ -51,7 +53,7 @@ return (
 
           <div className="row">
             {allProjects.map(proj => (
-              <Project key={proj.title} title={proj.title} subtitle={proj.subtitle} image={proj.image} stack={proj.stack} />
+              <Project key={proj.title} title={proj.title} githubUrl={proj.githubUrl} projectUrl={proj.projectUrl} subtitle={proj.subtitle} image={proj.image} stack={proj.stack} />
 
             ))}
             <div className="col-4 col-12-mobile">

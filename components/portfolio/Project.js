@@ -1,13 +1,17 @@
 import React from 'react'
 import ProjPic from './ProjPic'
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence, useViewportScroll } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+
 
 const StyledProject = styled.div`
   display: flex;
   height: fit-content; 
-  margin: 0; 
-  
+  margin: 0;
+  .opacity-0 {
+    opacity: 0;
+  }
   .icons {
     span {
       margin: 0 2rem;
@@ -16,9 +20,18 @@ const StyledProject = styled.div`
   .one {
     background: white;
    }
+  a {
+    border: none;
+    outline: none;
+    :visited {
+      border: none;
+      outline: none;
+    }
+  }
   
   .a {
     display: flex;
+
   }
   .item {
     width: 50%;
@@ -33,17 +46,38 @@ const StyledProject = styled.div`
   }
   
 `
-const Project = ({title, stack, subtitle, image}) => {
-  console.log(image)
+const Project = ({title, stack, subtitle, image, githubUrl, projectUrl}) => {
+  const { scrollYProgress } = useViewportScroll()
+  const [show, setShow] = useState(false)
+  const [lastY, setLastY] = useState(false)
+  const card = useRef();
+  useEffect(() => {
+    if (show) console.log('here')
+    const handleScroll = () => {
+      const yPos = window.scrollY;
+      const cardPos = card.current.getBoundingClientRect().y;
+      setShow(yPos > cardPos - 100)
+
+    }
+    window.addEventListener('scroll', handleScroll, false);
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+    }
+  })
+
   return (
 
-    <StyledProject  className="col-12">
+    <StyledProject  className={`col-12 ${show ? 'opacity-1': 'opacity-0'}`} >
+
           <motion.div 
-         whileHover={{scale: 1.03, translateY: -20, boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px'}} transition={{duration: 0.7}}>
+         whileHover={{scale: 1.03, translateY: -20, boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px'}} transition={{duration: 0.7}}
+         animate={ show ? {opacity: 1} : {opacity: 0}}
+         
+         >
 
-     
+      
 
-        <div className="a">
+        <div className="a" ref={card}>
 
 
     <article className="item one h100">
@@ -61,13 +95,13 @@ const Project = ({title, stack, subtitle, image}) => {
           </div>
         </div>
         <div className="fonts icons">
-        <motion.span className="icon fa-github"
+       <a href={githubUrl}> <motion.span className="icon fa-github"
         whileHover={{color: '#e27689'}} transition={{stype: 'spring', stiffness: 300}}
-        ></motion.span>
-        <motion.span 
+        ></motion.span></a>
+        <a href={projectUrl}><motion.span 
         whileHover={{color: '#e27689'}}
         className="icon fa-globe"></motion.span>
-        </div>
+        </a></div>
       </div> 
     </article>
 
