@@ -1,18 +1,19 @@
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-import React from 'react'
+import React from 'react';
+
 const theme = {
-  lightRed: "ffadad",
-  lightBrown: "ffd6a5",
-  lightGrey: "e2e0e0a6",
-  lightYellow: "fdffb6",
-  lightGreen: "caffbf",
-  lightBlue: "9bf6ff",
-  darkBlue: "a0c4ff",
-  blackBlue: "bdb2ff",
-  lightPurple: "ffc6ff",
-  white: "fffffc",
-  maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  lightRed: 'ffadad',
+  lightBrown: 'ffd6a5',
+  lightGrey: 'e2e0e0a6',
+  lightYellow: 'fdffb6',
+  lightGreen: 'caffbf',
+  lightBlue: '9bf6ff',
+  darkBlue: 'a0c4ff',
+  blackBlue: 'bdb2ff',
+  lightPurple: 'ffc6ff',
+  white: 'fffffc',
+  maxWidth: '1000px',
+  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -90,106 +91,113 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledPage = styled.div`
-  background: ${(props) => props.theme.white};
+  background: ${props => props.theme.white};
   color: black;
-  	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		position: relative;
-		display: inline-block;
-		border-radius: 0.35em;
-		color: #fff !important;
-		text-decoration: none;
-		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
-		border: 0;
-		cursor: pointer;
-		@include vendor('background-image', ('linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))', 'url("../images/overlay.png")'));
-		@include vendor('transition', 'background-color 0.35s ease-in-out');
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'],
+  button,
+  .button {
+    position: relative;
+    display: inline-block;
+    border-radius: 0.35em;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0.75em 2.5em 0.75em 2.5em;
+    background-color: #8ebebc;
+    border: 0;
+    cursor: pointer;
+    @include vendor(
+      'background-image',
+      (
+        'linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))',
+        'url("../images/overlay.png")'
+      )
+    );
+    @include vendor('transition', 'background-color 0.35s ease-in-out');
 
-		&:hover {
-			background-color: #9ececc;
-		}
+    &:hover {
+      background-color: #9ececc;
+    }
 
-		&:active {
-			background-color: #7eaeac;
-		}
-	}
+    &:active {
+      background-color: #7eaeac;
+    }
+  }
 
   #main {
-		margin-left: 375px;
+    margin-left: 375px;
 
-		> section {
-			margin: 0;
-			overflow: hidden;
-			padding: 4em 0;
-			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
-			text-align: center;
-			background-image: url('../images/overlay.png');
+    > section {
+      margin: 0;
+      overflow: hidden;
+      padding: 4em 0;
+      box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05),
+        inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+      text-align: center;
+      background-image: url('../images/overlay.png');
 
-			&.dark {
-				color: #ddd;
-				color: rgba(255, 255, 255, 0.75);
+      &.dark {
+        color: #ddd;
+        color: rgba(255, 255, 255, 0.75);
 
-				h2, h3, h4, h5, h6 {
-					color: inherit;
-				}
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: inherit;
+        }
 
-				strong {
-					color: #fff;
-					border-color: inherit;
-				}
+        strong {
+          color: #fff;
+          border-color: inherit;
+        }
 
-				a {
-					color: #fff;
-					border-color: inherit;
+        a {
+          color: #fff;
+          border-color: inherit;
 
-					&:hover {
-						border-bottom-color: rgba(255, 255, 255, 0);
-					}
-				}
-			}
+          &:hover {
+            border-bottom-color: rgba(255, 255, 255, 0);
+          }
+        }
+      }
 
-			&.cover {
-				padding: 10em 0;
-				background-size: cover;
-				background-position: center center;
-			}
+      &.cover {
+        padding: 10em 0;
+        background-size: cover;
+        background-position: center center;
+      }
 
-			&.one {
-				background-color: #81918E;
-				background-image: url('../images/banner.jpg');
-			}
+      &.one {
+        background-color: #81918e;
+        background-image: url('../images/banner.jpg');
+      }
 
-			&.two {
-				background-color: #f5fafa;
-			}
+      &.two {
+        background-color: #f5fafa;
+      }
 
-			&.three {
-				background-color: #ecf1f1;
-			}
+      &.three {
+        background-color: #ecf1f1;
+      }
 
-			&.four {
-				background-color: #e8edec;
-			}
-		}
-	}
+      &.four {
+        background-color: #e8edec;
+      }
+    }
+  }
 `;
 
 const Inner = styled.div`
-  max-width: ${(props) => props.theme.maxWidth};
+  max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
 `;
-const Page = ({children}) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <StyledPage>
-        {children}  
-      </StyledPage>      
-    </ThemeProvider>
-  )
-}
+const Page = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <StyledPage>{children}</StyledPage>
+  </ThemeProvider>
+);
 
-export default Page
+export default Page;
