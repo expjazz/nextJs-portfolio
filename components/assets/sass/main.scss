@@ -781,6 +781,16 @@
 	}
 
 /* Wide */
+@media screen and (max-width: 800px) {
+  .projSmall {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mediaItemProj {
+    width: 100% !important;
+  }
+}
 
 	@include breakpoint('wide') {
 

@@ -26,9 +26,9 @@ const StyledRight = styled.div`
   }
 `;
 
-const ProjPic = ({ image, stack }) => (
-  <StyledRight className="item">
-    <a href="/#" className="image fit">
+const ProjPic = ({ image, stack, url }) => (
+  <StyledRight className="item mediaItemProj">
+    <a href={url} target="_blank" className="image fit">
       <img src={image} alt="" />
     </a>
   </StyledRight>

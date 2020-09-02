@@ -6,9 +6,9 @@ import '../components/assets/sass/main.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <Page>
       <Component {...pageProps} />
-    </>
+    </Page>
   );
 }
 

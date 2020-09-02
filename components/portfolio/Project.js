@@ -89,8 +89,8 @@ const Project = ({
         initial={{ opacity: 0, x: -800 }}
         exit={{ x: 1000 }}
       >
-        <div className={`a ${isSmall ? 'flexCol' : ''}`} ref={card}>
-          <article className="item one h100">
+        <div className="a projSmall" ref={card}>
+          <article className="item one h100 mediaItemProj">
             <a href="/#" target="_blank" className="image fit"></a>
             <header>
               <h2 className="title">{title}</h2>
@@ -121,7 +121,7 @@ const Project = ({
             </div>
           </article>
 
-          <ProjPic image={image} stack={stack} />
+          <ProjPic image={image} stack={stack} url={projectUrl} />
         </div>
       </motion.div>
     </StyledProject>
