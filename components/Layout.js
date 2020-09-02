@@ -14,6 +14,7 @@ const Layout = props => {
     <>
       <Helmet
         title="Expedito Andrade Portfolio"
+        titleTemplate="Expedito Andrade"
         meta={[
           { name: 'description', content: 'Eventally' },
           { name: 'keywords', content: 'site, web' },
@@ -37,7 +38,7 @@ const Layout = props => {
             content:
               'web development, software developer, react, node, graphql',
           },
-        ]}
+        ].concat(meta)}
       >
         <html lang="en" />
       </Helmet>
