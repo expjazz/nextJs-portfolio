@@ -17,6 +17,26 @@ const Layout = props => {
         meta={[
           { name: 'description', content: 'Eventally' },
           { name: 'keywords', content: 'site, web' },
+          {
+            property: 'og:description',
+            content:
+              'FullStack Developer, Portfolio of Expedito Andrade, Microverse Student',
+          },
+          { property: 'og:type', content: 'website' },
+          { name: 'twitter:card', content: 'summary' },
+          { name: 'twitter:creator', content: 'Expedito Andrade' },
+          { name: 'twitter:title', content: 'Expedito Andrade Portfolio' },
+          {
+            name: 'twitter:description',
+            content:
+              'FullStack Developer, Portfolio of Expedito Andrade, Microverse Student',
+          },
+          { name: 'twitter:name', content: '@expjazz' },
+          {
+            name: 'keywords',
+            content:
+              'web development, software developer, react, node, graphql',
+          },
         ]}
       >
         <html lang="en" />

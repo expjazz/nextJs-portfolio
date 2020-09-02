@@ -86,7 +86,7 @@ const Project = ({
         initial={{ opacity: 0, x: -800 }}
         exit={{ x: 1000 }}
       >
-        <div className={`a  ${isSmall ? 'flexCol' : ''}`} ref={card}>
+        <div className={`a ${isSmall ? 'flexCol' : ''}`} ref={card}>
           <article className="item one h100">
             <a href="/#" className="image fit"></a>
             <header>

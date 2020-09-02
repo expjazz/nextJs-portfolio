@@ -75,7 +75,7 @@ export default function Home() {
               {allProjects.map((proj, index) => {
                 if (index !== projIndex) {
                   return (
-                    <div className="col-4 col-12-mobile">
+                    <div key={proj.title} className="col-4 col-12-mobile">
                       <article className="item">
                         <ProjButton
                           className="image fit button"
@@ -109,7 +109,11 @@ export default function Home() {
               instrumental music, with experience of playing in different
               countries and cities. <br /> After being in love with music for my
               whole life, I found another passion in web development. Much like
-              in music, I can give life to all my creativity.
+              in music, I can give life to all my creativity. <br />
+              My leading technologies are React, NextJs, GraphQl with Apollo,
+              MongoDB, Prisma, Ruby on Rails and Sass. I'm a graduate from the
+              prestiged Microverse bootcamp and I pride myself in working as
+              hard as I can.
             </p>
           </div>
         </section>
@@ -125,13 +129,19 @@ export default function Home() {
             <form method="post" data-netlify="true" action="#">
               <div className="row">
                 <div className="col-6 col-12-mobile">
-                  <input type="text" name="name" placeholder="Name" />
+                  <label htmlFor="name">
+                    <input type="text" name="name" placeholder="Name" />
+                  </label>
                 </div>
                 <div className="col-6 col-12-mobile">
-                  <input type="text" name="email" placeholder="Email" />
+                  <label htmlFor="email">
+                    <input type="text" name="email" placeholder="Email" />
+                  </label>
                 </div>
                 <div className="col-12">
-                  <textarea name="message" placeholder="Message" />
+                  <label htmlFor="message">
+                    <textarea name="message" placeholder="Message" />
+                  </label>
                 </div>
                 <div className="col-12">
                   <input type="submit" value="Send Message" />
