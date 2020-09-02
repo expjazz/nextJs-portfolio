@@ -84,7 +84,7 @@ export default function Home() {
                           onClick={() => handleProjShow(index)}
                         >
                           <header>
-                            <h3>Magna Nullam</h3>
+                            <h3>{proj.title}</h3>
                           </header>
                         </ProjButton>
                       </article>

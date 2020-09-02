@@ -16,4 +16,32 @@ export default [
     githubUrl: 'https://github.com/expjazz/final_capstone_frontEnd',
     projectUrl: 'https://workforall.netlify.app/',
   },
+
+  {
+    title: 'Weather App',
+    subtitle:
+      'Here you can check out the weather in anywhere in the world. It is built with vanilla Javascript toguether with Tailwind in a clear UI',
+    image: 'projectThree.png',
+    githubUrl: 'https://github.com/expjazz/weather_app',
+    projectUrl:
+      'https://raw.githack.com/expjazz/weather_app/featureV1/dist/index.html',
+  },
+
+  {
+    title: 'Running Game',
+    subtitle:
+      ' In this fun game, you can run for your life. This is built with the phaser framework that uses javascript in conjuction to the canvas from HTML5',
+    image: 'projFour.png',
+    githubUrl: 'https://github.com/expjazz/Creating-a-game_Javascript',
+    projectUrl: 'https://savepets.netlify.app/',
+  },
+
+  {
+    title: 'Managing your taks',
+    subtitle:
+      "    This is a full-fledge rails app, featuring a task manager functionality, were you can register a task and how much time you spend doing it. You also can group them together. Here, we have two types of user, a manager and an employee. The manager can see the employee's tasks and create as well. Users can talk to each other via a live chat.",
+    image: 'projFive.png',
+    githubUrl: 'https://github.com/expjazz/rails_capstone',
+    projectUrl: 'https://intense-earth-68762.herokuapp.com/',
+  },
 ];

@@ -52,7 +52,7 @@ const Project = ({
   id,
 }) => {
   const { scrollYProgress } = useViewportScroll();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [lastY, setLastY] = useState(false);
   const card = useRef();
   useEffect(() => {
@@ -78,6 +78,7 @@ const Project = ({
         }}
         transition={{ duration: 0.7 }}
         animate={show ? { opacity: 1 } : { opacity: 0 }}
+        initial={{ opacity: 0 }}
       >
         <div className="a" ref={card}>
           <article className="item one h100">

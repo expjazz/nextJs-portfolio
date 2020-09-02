@@ -1,15 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const StyledRight = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: space-between;
-  height: 100%;
-
-    display: flex;
+  background: white;
+  display: flex;
   a {
     padding: 2rem;
     background: white;
@@ -25,20 +24,14 @@ const StyledRight = styled.div`
     width: 100%;
     margin: 0 auto;
   }
+`;
 
-`
+const ProjPic = ({ image, stack }) => (
+  <StyledRight className="item">
+    <a href="/#" className="image fit">
+      <img src={image} alt="" />
+    </a>
+  </StyledRight>
+);
 
-
-const ProjPic = ({image, stack}) => {
-  return (
-    <StyledRight className="item">
-
-      <a href="/#" className="image fit">
-        <img src={image} alt=""/>
-      
-      </a>
-    </StyledRight>
-  )
-}
-
-export default ProjPic
+export default ProjPic;
