@@ -1,12 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence, useViewportScroll } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import ProjPic from './ProjPic';
 
 const StyledProject = styled.div`
   display: flex;
   height: fit-content;
   margin: 0;
+  .flexCol {
+    flex-direction: column;
+  }
   .opacity-0 {
     opacity: 0;
   }
@@ -31,7 +35,7 @@ const StyledProject = styled.div`
     display: flex;
   }
   .item {
-    width: 50%;
+    ${({ isSmall }) => (isSmall ? 'width: 100%' : 'width: 50%')}
     margin: 0;
   }
   .title {
@@ -51,6 +55,7 @@ const Project = ({
   projectUrl,
   id,
 }) => {
+  const isSmall = useMediaQuery({ maxDeviceWidth: 800 });
   const { scrollYProgress } = useViewportScroll();
   const [show, setShow] = useState(true);
   const [lastY, setLastY] = useState(false);
@@ -69,7 +74,10 @@ const Project = ({
   });
 
   return (
-    <StyledProject className={`col-12 ${show ? 'opacity-1' : 'opacity-0'}`}>
+    <StyledProject
+      className={`col-12 ${show ? 'opacity-1' : 'opacity-0'}`}
+      isSmall={isSmall}
+    >
       <motion.div
         whileHover={{
           scale: 1.03,
@@ -81,7 +89,7 @@ const Project = ({
         initial={{ opacity: 0, x: -800 }}
         exit={{ x: 1000 }}
       >
-        <div className="a" ref={card}>
+        <div className={`a  ${isSmall ? 'flexCol' : ''}`} ref={card}>
           <article className="item one h100">
             <a href="/#" className="image fit"></a>
             <header>

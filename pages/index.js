@@ -121,7 +121,7 @@ export default function Home() {
 
             <p>Let's create something great.</p>
 
-            <form method="post" data-netlify="true">
+            <form method="post" data-netlify="true" action="#">
               <div className="row">
                 <div className="col-6 col-12-mobile">
                   <input type="text" name="name" placeholder="Name" />
