@@ -50,8 +50,8 @@ return (
           </p>
 
           <div className="row">
-            {allProjects.map(proj => (
-              <Project key={proj.title} title={proj.title} githubUrl={proj.githubUrl} projectUrl={proj.projectUrl} subtitle={proj.subtitle} image={proj.image} stack={proj.stack} />
+            {allProjects.map((proj, index) => (
+              <Project key={proj.title} id={index} title={proj.title} githubUrl={proj.githubUrl} projectUrl={proj.projectUrl} subtitle={proj.subtitle} image={proj.image} stack={proj.stack} />
 
             ))}
             <div className="col-4 col-12-mobile">

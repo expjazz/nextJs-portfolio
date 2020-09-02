@@ -152,10 +152,12 @@
 		letter-spacing: -1px;
 
 		&.alt {
-			color: #888;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
 
 			strong {
-				color: #666;
+        color: #888;
+        font-weight: 700;
 			}
 		}
 	}
@@ -756,12 +758,7 @@
 			}
 
 			&.one {
-        background:
-  linear-gradient(
-    -8deg,
-    #0405015e,
-    #00000086
-  ), url('../../../public/home.jpeg');
+        background: url('../../../public/home2.jpg');
      		background-size: cover;
 				background-position: center center;
 			

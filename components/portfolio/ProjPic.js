@@ -10,7 +10,10 @@ const StyledRight = styled.div`
   height: 100%;
 
     display: flex;
-
+  a {
+    padding: 2rem;
+    background: white;
+  }
   .icon {
     color: #222629;
     margin-left: 5px;
