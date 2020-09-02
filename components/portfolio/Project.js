@@ -35,7 +35,7 @@ const StyledProject = styled.div`
     display: flex;
   }
   .item {
-    ${({ isSmall }) => (isSmall ? 'width: 100%' : 'width: 50%')}
+    ${({ isSmall }) => (isSmall ? 'width: 100%;' : 'width: 50%;')}
     margin: 0;
   }
   .title {
