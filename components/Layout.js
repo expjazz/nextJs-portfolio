@@ -38,7 +38,7 @@ const Layout = props => {
             content:
               'web development, software developer, react, node, graphql',
           },
-        ].concat(meta)}
+        ]}
       >
         <html lang="en" />
       </Helmet>
