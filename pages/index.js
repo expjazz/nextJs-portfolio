@@ -16,15 +16,13 @@ const ProjButton = styled.button`
 
 export default function Home() {
   const sections = [
-    { id: 'top', name: 'intro', icon: 'fa-home' },
+    { id: 'top', name: 'Intro', icon: 'fa-home' },
     { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
     { id: 'about', name: 'About Me', icon: 'fa-user' },
     { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
   ];
   const [projIndex, setProjIndex] = useState(0);
   const handleProjShow = index => {
-    console.log(index);
-    console.log(allProjects[index]);
     setProjIndex(index);
   };
   return (
@@ -105,13 +103,12 @@ export default function Home() {
             <a href="/#" className="image featured"></a>
 
             <p>
-              Developers football competition in diameter big price to layer the
-              pot. Chavez ultricies care who wants to CNN. Lobortis elementum
-              aliquet eget a den of which they do not hold it in hatred
-              developers nor the mountains of the deposit slip. The element of
-              time, sem ante ullamcorper dolor nulla quam placerat viverra
-              environment is not with our customers. Free makeup and skirt until
-              the mouse or partners or to decorate each targeted.
+              I'm a musician/web developer that loves to bring new ideas to
+              life. I have a solid and successful career playing jazz and
+              instrumental music, with experience of playing in different
+              countries and cities. <br /> After being in love with music for my
+              whole life, I found another passion in web development. Much like
+              in music, I can give life to all my creativity.
             </p>
           </div>
         </section>
@@ -122,15 +119,9 @@ export default function Home() {
               <h2>Contact</h2>
             </header>
 
-            <p>
-              The element of time, sem ante ullamcorper dolor nulla quam
-              placerat viverra environment is not with our customers. Free
-              makeup and skirt until the mouse. Japan this innovative and
-              ultricies carton salad clinical ridiculous now passes from
-              enhanced. Mauris pot innovative care for my pain.
-            </p>
+            <p>Let's create something great.</p>
 
-            <form method="post" action="#">
+            <form method="post" data-netlify="true">
               <div className="row">
                 <div className="col-6 col-12-mobile">
                   <input type="text" name="name" placeholder="Name" />

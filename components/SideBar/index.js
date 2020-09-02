@@ -1,69 +1,68 @@
-import React, { useState } from 'react'
-import Top from './Top'
-import Nav from './Nav'
-import styled from 'styled-components'
-import TopNav from './TopNav'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Top from './Top';
+import Nav from './Nav';
+import TopNav from './TopNav';
+import Footer from './Footer';
+import socialLinks from '../socialLinks';
+
 const StyledSideNav = styled.div`
-#header {
+  #header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-		background: #222629 url('overlay.png');
-		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		color: #fff;
-		height: 100%;
-		left: 0;
-		overflow-y: auto;
-		position: fixed;
-		text-align: right;
-		top: 0;
-;
-
-		.top {
+    background: #222629 url('overlay.png');
+    box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
+    color: #fff;
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    .top {
       flex-grow: 1;
-		}
+    }
 
-		.bottom {
-			flex-shrink: 0;
-			padding: 1.5em 0 0.75em 0;
+    .bottom {
+      flex-shrink: 0;
+      padding: 1.5em 0 0.75em 0;
 
-			> :last-child {
-				margin-bottom: 0;
-			}
-		}
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
 
-		.icons {
-			font-size: 0.8em;
-			text-align: center;
+    .icons {
+      font-size: 0.8em;
+      text-align: center;
 
-			a {
-				color: #41484c;
-				transition: color 0.35s ease-in-out;
+      a {
+        color: #41484c;
+        transition: color 0.35s ease-in-out;
 
-				&:hover {
-					color: #fff;
-				}
-			}
-		}
-	}
-
-
-`
-const index = ({sections}) => {
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+`;
+const index = ({ sections }) => {
   const [headerOpen, toggleHeader] = useState(false);
 
   return (
-    < StyledSideNav className={`${headerOpen ? 'header-visible' : ' '}`}>
+    <StyledSideNav className={`${headerOpen ? 'header-visible' : ' '}`}>
       <TopNav
-        title='Expedito Andrade'
+        title="Expedito Andrade"
         onMenuClick={() => toggleHeader(!headerOpen)}
       />
       <div id="header">
         <div className="top">
-          <Top
-          />
+          <Top />
           <Nav sections={sections} />
         </div>
+        <Footer socialLinks={socialLinks} />
       </div>
 
       {/* <section id="header">
@@ -75,8 +74,8 @@ const index = ({sections}) => {
         <Nav sections={sections} />
         <Footer socialLinks={config.socialLinks} />
       </section> */}
-    </StyledSideNav >
-  )
-}
+    </StyledSideNav>
+  );
+};
 
-export default index
+export default index;

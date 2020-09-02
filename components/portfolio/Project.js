@@ -77,8 +77,9 @@ const Project = ({
           boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px',
         }}
         transition={{ duration: 0.7 }}
-        animate={show ? { opacity: 1 } : { opacity: 0 }}
-        initial={{ opacity: 0 }}
+        animate={show ? { opacity: 1, x: 0 } : { opacity: 0 }}
+        initial={{ opacity: 0, x: -800 }}
+        exit={{ x: 1000 }}
       >
         <div className="a" ref={card}>
           <article className="item one h100">
