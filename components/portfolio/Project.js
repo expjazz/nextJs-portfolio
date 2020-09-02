@@ -39,11 +39,9 @@ const StyledProject = styled.div`
     margin: 0;
   }
   .title {
-    font-size: 2rem;
     font-weight: bold;
   }
   .subtitle {
-    font-size: 14px;
   }
 `;
 const Project = ({
@@ -61,7 +59,6 @@ const Project = ({
   const [lastY, setLastY] = useState(false);
   const card = useRef();
   useEffect(() => {
-    if (show) console.log('here');
     const handleScroll = () => {
       const yPos = window.scrollY;
       const cardPos = card.current.getBoundingClientRect().y;

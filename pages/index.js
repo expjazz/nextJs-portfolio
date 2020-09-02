@@ -7,8 +7,9 @@ import Scroll from '../components/Scroll';
 import allProjects from '../components/projects';
 import Project from '../components/portfolio/Project';
 import Me from '../components/Me';
+import Layout from '../components/Layout';
 
-const ProjButton = styled.button`
+const ProjButton = styled.a`
   margin: 0;
   padding: 0 !important;
   background-color: 'white' !important;
@@ -26,7 +27,7 @@ export default function Home() {
     setProjIndex(index);
   };
   return (
-    <>
+    <Layout>
       <SideBar sections={sections} />
       <div id="main">
         <section id="top" className="one dark cover">
@@ -77,8 +78,8 @@ export default function Home() {
                     <div className="col-4 col-12-mobile">
                       <article className="item">
                         <ProjButton
-                          type="button"
-                          className="image fit"
+                          className="image fit button"
+                          aria-pressed="false"
                           onClick={() => handleProjShow(index)}
                         >
                           <header>
@@ -140,6 +141,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 }
