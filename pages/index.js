@@ -37,7 +37,7 @@ export default function Home() {
               <br />
               Web developer
             </h2>
-            <p>I have made few things check it out.</p>
+            <p>Check out my work.</p>
             <footer>
               <Scroll type="id" element="portfolio">
                 <a href="#portfolio" className="button">
@@ -111,9 +111,9 @@ export default function Home() {
               whole life, I found another passion in web development. Much like
               in music, I can give life to all my creativity. <br />
               My leading technologies are React, NextJs, GraphQl with Apollo,
-              MongoDB, Prisma, Ruby on Rails and Sass. I'm a graduate from the
-              prestiged Microverse bootcamp and I pride myself in working as
-              hard as I can.
+              MongoDB, Prisma, Ruby on Rails, and Sass. I'm a graduate from the
+              prestige Microverse Bootcamp and I pride myself on working as hard
+              as I can.
             </p>
           </div>
         </section>

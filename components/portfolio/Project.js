@@ -8,6 +8,9 @@ const StyledProject = styled.div`
   display: flex;
   height: fit-content;
   margin: 0;
+  header {
+    padding: 1em 2em;
+  }
   .flexCol {
     flex-direction: column;
   }
@@ -88,7 +91,7 @@ const Project = ({
       >
         <div className={`a ${isSmall ? 'flexCol' : ''}`} ref={card}>
           <article className="item one h100">
-            <a href="/#" className="image fit"></a>
+            <a href="/#" target="_blank" className="image fit"></a>
             <header>
               <h2 className="title">{title}</h2>
             </header>
@@ -100,7 +103,7 @@ const Project = ({
                 <div className="wave"></div>
               </div>
               <div className="fonts icons">
-                <a href={githubUrl}>
+                <a href={githubUrl} target="_blank">
                   {' '}
                   <motion.span
                     className="icon fa-github"
@@ -108,7 +111,7 @@ const Project = ({
                     transition={{ stype: 'spring', stiffness: 300 }}
                   ></motion.span>
                 </a>
-                <a href={projectUrl}>
+                <a href={projectUrl} target="_blank">
                   <motion.span
                     whileHover={{ color: '#e27689' }}
                     className="icon fa-globe"

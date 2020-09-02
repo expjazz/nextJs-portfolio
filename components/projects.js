@@ -2,7 +2,7 @@ export default [
   {
     title: 'Statistical Dashboard',
     subtitle:
-      'This is a website where you can showcase statistics to improve the performance of your business. It was build with react, reduz and chartJs on the frontend, and ruby on rails on the backend.',
+      'This is a website where you can showcase statistics to improve the performance of your business. In this example, I used data to show how popular famous leaders of the world are on social media. It was built with react, redux, and chartJs on the frontend, and ruby on rails on the backend.',
     image: 'projectOne.png',
     stack: 'React',
     githubUrl: 'https://github.com/expjazz/react_capstone',
@@ -11,7 +11,7 @@ export default [
   {
     title: 'Work For All',
     subtitle:
-      'This is a portal for anouncing and finding jobs, where you can log in either as a company or an user, and post a job spot on apply to a job. It is build with react and redux on the frontend, and ruby on rails on the backend. The project features a full fledge  authentication system using secured cookies and JWT tokens.',
+      'This is a portal for announcing and finding jobs, where you can log in either as a company or a user, and post a job spot on applying to a job. It is built with react and redux on the frontend, and ruby on rails on the backend. The project features a full fledge authentication system using secured cookies and JWT tokens. The database has some complex models, while react manages the information and restricts the view basing on the type of user.',
     image: 'projectTwo.png',
     githubUrl: 'https://github.com/expjazz/final_capstone_frontEnd',
     projectUrl: 'https://workforall.netlify.app/',
@@ -20,7 +20,7 @@ export default [
   {
     title: 'Weather App',
     subtitle:
-      'Here you can check out the weather in anywhere in the world. It is built with vanilla Javascript toguether with Tailwind in a clear UI',
+      'Here you can check out the weather anywhere in the world. It is built with vanilla Javascript together with Tailwind in a clear UI. It also features promises and gets the geolocation of the user to do the first query.',
     image: 'projectThree.png',
     githubUrl: 'https://github.com/expjazz/weather_app',
     projectUrl:
@@ -30,7 +30,7 @@ export default [
   {
     title: 'Running Game',
     subtitle:
-      ' In this fun game, you can run for your life. This is built with the phaser framework that uses javascript in conjuction to the canvas from HTML5',
+      'In this fun game, you can run for your life. This is built with the phaser framework that uses javascript in conjunction with the canvas from HTML5',
     image: 'projFour.png',
     githubUrl: 'https://github.com/expjazz/Creating-a-game_Javascript',
     projectUrl: 'https://savepets.netlify.app/',
@@ -39,7 +39,7 @@ export default [
   {
     title: 'Managing your taks',
     subtitle:
-      "    This is a full-fledge rails app, featuring a task manager functionality, were you can register a task and how much time you spend doing it. You also can group them together. Here, we have two types of user, a manager and an employee. The manager can see the employee's tasks and create as well. Users can talk to each other via a live chat.",
+      " This is a full-fledge rails app, featuring a task manager functionality, where you can register a task and how much time you spend doing it. You also can group them together. Here, we have two types of users, a manager, and an employee. The manager can see the employee's tasks and create them as well. Users can talk to each other via a live chat. The view is restricted depending on the type of user (manager or employee)",
     image: 'projFive.png',
     githubUrl: 'https://github.com/expjazz/rails_capstone',
     projectUrl: 'https://intense-earth-68762.herokuapp.com/',

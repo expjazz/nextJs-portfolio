@@ -34,7 +34,7 @@ const StyledLogo = styled.div`
 
 const Top = () => (
   <StyledLogo id="logo">
-    <Link href="/">
+    <a href="/" className="b">
       <>
         <span className="image avatar48">
           <img src="logo.png" height="128px" alt="" />
@@ -43,7 +43,7 @@ const Top = () => (
         <h1 id="title">Expedito Andrade</h1>
         <p>Full Stack Developer</p>
       </>
-    </Link>
+    </a>
   </StyledLogo>
 );
 
