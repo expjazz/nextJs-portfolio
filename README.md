@@ -1,30 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+This is the page I have built where I showcase all my projects, while also sharing my music videos and the articles I have written.
 
-## Getting Started
+### Screenshots
 
-First, run the development server:
+#### Main Menu
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- ![Main page](./screenshot.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
+### FEATURES
 
-To learn more about Next.js, take a look at the following resources:
+It uses styled-components and Static Site Rendering.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Live 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Here](https://www.expeditoandrade.me)
 
-## Deploy on Vercel
+### BUILT WITH
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- React / NextJs
+- Styled Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Getting Started
+
+- Clone the project to your local machine;
+- `cd` into the project directory;
+- Run `yarn install` to install the necessary modules;
+- To check in development mode, run `yarn dev`, the page will automatically load on [localhost:3000](localhost:3000).
+
+### AUTHORS
+
+👤Expedito Andrade
+
+- Github: [@githubexpjazz](https://github.com/expjazz)
+- Twitter: [@expjazz](https://twitter.com/expeditoandrade13)
+- Linkedin: [Expedito Andrade](https://www.linkedin.com/in/expedito-andrade/)
+- Portfolio: [Expedito Andrade](https://www.expeditoandrade.me)
+
+### Show your support
+
+Give a star if you like this project!
+
+### Acknowledgments
+
+- Microverse
+- This data is Fake. The idea is to showcase a possible dashoard
+
+### 🤝 Contributing
+
+Contributions, issues and feature requests are welcome! Start by:
+
+- Forking the project
+- Cloning the project to your local machine
+- `cd` into the project directory
+- Run `git checkout -b your-branch-name`
+- Make your contributions
+- Push your branch up to your forked repository
+- Open a Pull Request with a detailed description to the development branch of the original project for a review
+
+### Show your support
+
+Give a ⭐️ if you like this project!
+
+### 📝 License
+
+This project is MIT licensed
