@@ -4,7 +4,7 @@ export default [
     subtitle:
       'This is a website where you can showcase statistics to improve the performance of your business. In this example, I used data to show how popular famous leaders of the world are on social media. It was built with react, redux, and chartJs on the frontend, and ruby on rails on the backend.',
     image: 'projectOne.png',
-    stack: 'React',
+    stack: 'React, Ruby on Rails',
     githubUrl: 'https://github.com/expjazz/react_statistical_dashboard',
     projectUrl: 'https://leadersofworlddashboard.netlify.app/',
   },
@@ -15,6 +15,7 @@ export default [
     image: 'projectTwo.png',
     githubUrl: 'https://github.com/expjazz/react_work_for_all',
     projectUrl: 'https://workforall.netlify.app/',
+    stack: 'React, Ruby on Rails',
   },
 
   {
@@ -25,6 +26,7 @@ export default [
     githubUrl: 'https://github.com/expjazz/weather_app',
     projectUrl:
       'https://raw.githack.com/expjazz/weather_app/featureV1/dist/index.html',
+    stack: 'Javascript',
   },
 
   {
@@ -34,6 +36,7 @@ export default [
     image: 'projFour.png',
     githubUrl: 'https://github.com/expjazz/Creating-a-game_Javascript',
     projectUrl: 'https://savepets.netlify.app/',
+    stack: 'Javascript, Phaser 3',
   },
 
   {
@@ -43,5 +46,6 @@ export default [
     image: 'projFive.png',
     githubUrl: 'https://github.com/expjazz/rails_managing_tasks_app',
     projectUrl: 'https://intense-earth-68762.herokuapp.com/',
+    stack: 'Ruby on Rails',
   },
 ];
