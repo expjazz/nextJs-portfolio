@@ -762,9 +762,34 @@
 			&.one {
         background: url('../../../public/home2.jpg');
      		background-size: cover;
-				background-position: center center;
+        background-position: center center;
+        padding: 5em 0 10em 0;
 			
-			}
+      }
+      .buttonS {
+        padding: 10px 35px !important;
+      }
+
+      .buttonP {
+        position: relative;
+    display: inline-block;
+    border-radius: 0.35em;
+    color: #fff !important;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 17px;
+    border: 0;
+    cursor: pointer;
+      }
+
+      .green {
+        background: #222629 !important;
+      }
+      
+      .colorT {
+        color:#222629 !important;
+      }
 
 			&.two {
 				background-color: #f5fafa;
@@ -833,7 +858,7 @@
 
 				section {
 					&.cover {
-						padding: 5em 0;
+						padding: 5em 0 12em 0;
 					}
 				}
 			}
@@ -1088,7 +1113,7 @@
 
 				section {
 					&.cover {
-						padding: 4em 0;
+						padding: 4em 0 12em 0;
 					}
 				}
 			}
@@ -1132,7 +1157,7 @@
 
 				section {
 					&.cover {
-						padding: 4em 0em;
+						padding: 4em 0em 12em 0;
 
 						header {
 							padding: 0 1em;

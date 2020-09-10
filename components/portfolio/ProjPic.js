@@ -6,7 +6,7 @@ const StyledRight = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   background: white;
   display: flex;
   a {

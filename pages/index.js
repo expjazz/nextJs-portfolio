@@ -32,16 +32,15 @@ export default function Home() {
       <div id="main">
         <section id="top" className="one dark cover">
           <div className="container">
-            <h2 className="alt">
+            <h2 className="alt colorT">
               Hi! I'm <strong>Expedito</strong>
               <br />
               Web developer
             </h2>
-            <p>Check out my work.</p>
             <footer>
               <Scroll type="id" element="portfolio">
-                <a href="#portfolio" className="button">
-                  Show me
+                <a href="#portfolio" className="button green">
+                  Check out my work
                 </a>
               </Scroll>
             </footer>
@@ -60,37 +59,18 @@ export default function Home() {
             </p>
 
             <div className="row">
-              {
+              {allProjects.map(proj => (
                 <Project
-                  key={allProjects[projIndex].title}
+                  key={proj.title}
                   id="current"
-                  title={allProjects[projIndex].title}
-                  githubUrl={allProjects[projIndex].githubUrl}
-                  projectUrl={allProjects[projIndex].projectUrl}
-                  subtitle={allProjects[projIndex].subtitle}
-                  image={allProjects[projIndex].image}
-                  stack={allProjects[projIndex].stack}
+                  title={proj.title}
+                  githubUrl={proj.githubUrl}
+                  projectUrl={proj.projectUrl}
+                  subtitle={proj.subtitle}
+                  image={proj.image}
+                  stack={proj.stack}
                 />
-              }
-              {allProjects.map((proj, index) => {
-                if (index !== projIndex) {
-                  return (
-                    <div key={proj.title} className="col-4 col-12-mobile">
-                      <article className="item">
-                        <ProjButton
-                          className="image fit button"
-                          aria-pressed="false"
-                          onClick={() => handleProjShow(index)}
-                        >
-                          <header>
-                            <h3>{proj.title}</h3>
-                          </header>
-                        </ProjButton>
-                      </article>
-                    </div>
-                  );
-                }
-              })}
+              ))}
             </div>
           </div>
         </section>

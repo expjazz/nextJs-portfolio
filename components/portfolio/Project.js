@@ -18,8 +18,11 @@ const StyledProject = styled.div`
     opacity: 0;
   }
   .icons {
+    display: flex;
+    justify-content: space-around;
+    ${props => (props.isSmall ? 'flex-direction: column' : '')}
     span {
-      margin: 0 2rem;
+      margin: 0 1rem;
     }
   }
   .one {
@@ -56,7 +59,8 @@ const Project = ({
   projectUrl,
   id,
 }) => {
-  const isSmall = useMediaQuery({ maxDeviceWidth: 800 });
+  const isSmall = useMediaQuery({ maxDeviceWidth: 600 });
+  const isMedium = useMediaQuery({ maxDeviceWidth: 800 });
   const { scrollYProgress } = useViewportScroll();
   const [show, setShow] = useState(true);
   const [lastY, setLastY] = useState(false);
@@ -65,7 +69,7 @@ const Project = ({
     const handleScroll = () => {
       const yPos = window.scrollY;
       const cardPos = card.current.getBoundingClientRect().y;
-      setShow(yPos > cardPos - 100);
+      setShow(yPos > cardPos - 300);
     };
     window.addEventListener('scroll', handleScroll, false);
     return () => {
@@ -80,7 +84,7 @@ const Project = ({
     >
       <motion.div
         whileHover={{
-          scale: 1.03,
+          scale: 1.01,
           translateY: -20,
           boxShadow: 'rgba(0, 0, 0, 0.2) 0px 0px 8px',
         }}
@@ -94,6 +98,7 @@ const Project = ({
             <a href="/#" target="_blank" className="image fit"></a>
             <header>
               <h2 className="title">{title}</h2>
+              <h3>{stack}</h3>
             </header>
             <header>
               <h3 className="subtitle">{subtitle}</h3>
@@ -102,20 +107,35 @@ const Project = ({
               <div className="containerss">
                 <div className="wave"></div>
               </div>
-              <div className="fonts icons">
-                <a href={githubUrl} target="_blank">
-                  {' '}
+              <div className="fonts icons" isSmall={isSmall}>
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  className={
+                    isMedium ? 'buttonS green buttonP' : 'buttonP green'
+                  }
+                >
                   <motion.span
                     className="icon fa-github"
                     whileHover={{ color: '#e27689' }}
                     transition={{ stype: 'spring', stiffness: 300 }}
-                  ></motion.span>
+                  >
+                    {!isSmall ? <span>Github </span> : ''}
+                  </motion.span>
                 </a>
-                <a href={projectUrl} target="_blank">
+                <a
+                  href={projectUrl}
+                  target="_blank"
+                  className={
+                    isMedium ? 'buttonS green buttonP' : 'buttonP green'
+                  }
+                >
                   <motion.span
                     whileHover={{ color: '#e27689' }}
                     className="icon fa-globe"
-                  ></motion.span>
+                  >
+                    {!isSmall ? <span>Live </span> : ''}
+                  </motion.span>
                 </a>
               </div>
             </div>
