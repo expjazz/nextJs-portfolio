@@ -69,7 +69,7 @@ const Project = ({
     const handleScroll = () => {
       const yPos = window.scrollY;
       const cardPos = card.current.getBoundingClientRect().y;
-      setShow(yPos > cardPos - 600);
+      setShow(yPos > cardPos - 900);
     };
     window.addEventListener('scroll', handleScroll, false);
     return () => {

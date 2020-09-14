@@ -92,8 +92,8 @@ export default function Home() {
               in music, I can give life to all my creativity. <br />
               My leading technologies are React, NextJs, GraphQl with Apollo,
               MongoDB, Prisma, Ruby on Rails, and Sass. I'm a graduate from the
-              prestige Microverse Bootcamp and I pride myself on working as hard
-              as I can.
+              prestigious Microverse Bootcamp and I pride myself on working as
+              hard as I can.
             </p>
           </div>
         </section>
