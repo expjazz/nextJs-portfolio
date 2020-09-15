@@ -18,7 +18,7 @@ const ProjButton = styled.a`
 export default function Home() {
   const sections = [
     { id: 'top', name: 'Intro', icon: 'fa-home' },
-    { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
+    { id: 'portfolio', name: 'See my projects', icon: 'fa-th' },
     { id: 'about', name: 'About Me', icon: 'fa-user' },
     { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
   ];
@@ -34,13 +34,17 @@ export default function Home() {
           <div className="container">
             <h2 className="alt colorT">
               Hi! I'm <strong>Expedito</strong>
-              <br />
-              Web developer
+              <br />a full-stack Developer.
             </h2>
+            <p className="subTitleOne">
+              Coding is bringing new ideas to life to make the world better one
+              code line at a time. Here I showcase my technical contributions to
+              this goal.
+            </p>
             <footer>
               <Scroll type="id" element="portfolio">
                 <a href="#portfolio" className="button green">
-                  Check out my work
+                  See my projects
                 </a>
               </Scroll>
             </footer>
@@ -50,13 +54,8 @@ export default function Home() {
         <section id="portfolio" className="two">
           <div className="container">
             <header>
-              <h2>Portfolio</h2>
+              <h2>See my projects</h2>
             </header>
-
-            <p>
-              Coding is bringing new ideas to life, to make the world better one
-              line at a time. Here I showcase my tries to make a difference;
-            </p>
 
             <div className="row">
               {allProjects.map(proj => (

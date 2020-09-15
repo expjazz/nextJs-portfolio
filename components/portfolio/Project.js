@@ -98,7 +98,7 @@ const Project = ({
             <a href="/#" target="_blank" className="image fit"></a>
             <header>
               <h2 className="title">{title}</h2>
-              <h3>{stack}</h3>
+              <h3>Tech Stack Used: {stack}</h3>
             </header>
             <header>
               <h3 className="subtitle">{subtitle}</h3>
