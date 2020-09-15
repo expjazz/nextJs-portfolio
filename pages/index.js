@@ -77,7 +77,7 @@ export default function Home() {
         <section id="about" className="three">
           <div className="container">
             <header>
-              <h2>About Me</h2>
+              <h2 className="boldFont ">About Me</h2>
             </header>
 
             <a href="/#" className="image featured"></a>
@@ -100,7 +100,7 @@ export default function Home() {
         <section id="contact" className="four">
           <div className="container">
             <header>
-              <h2>Contact</h2>
+              <h2 className="boldFont ">Contact</h2>
             </header>
 
             <p>Let's create something great.</p>
@@ -122,8 +122,8 @@ export default function Home() {
                     <textarea name="message" placeholder="Message" />
                   </label>
                 </div>
-                <div className="col-12">
-                  <input type="submit" value="Send Message" />
+                <div className="col-12 ">
+                  <input type="submit" value="Send Message" className="green" />
                 </div>
               </div>
             </form>
