@@ -8,6 +8,7 @@ import allProjects from '../components/projects';
 import Project from '../components/portfolio/Project';
 import Me from '../components/Me';
 import Layout from '../components/Layout';
+import Footer from '../components/SideBar/Footer';
 
 const ProjButton = styled.a`
   margin: 0;
@@ -94,6 +95,30 @@ export default function Home() {
               prestigious Microverse Bootcamp and I pride myself on working as
               hard as I can.
             </p>
+          </div>
+          <div className="icons flex">
+            <img
+              src="https://camo.githubusercontent.com/fa3377f592d3a75ae934707e76fe4a2e6947e55e/68747470733a2f2f696d672e69636f6e73382e636f6d2f706c6173746963696e652f34382f3030303030302f72656163742e706e67"
+              alt="react"
+            />
+
+            <img
+              src="https://camo.githubusercontent.com/6146fae5e8f082c2c4ed5511ee36652af91c69f1/68747470733a2f2f696d672e69636f6e73382e636f6d2f636f6c6f722f34382f3030303030302f6772617068716c2e706e67"
+              alt="graphql"
+            />
+            <img
+              src="https://camo.githubusercontent.com/6b349988f28a2d77fd4d372f3aa58f4e786afc41/68747470733a2f2f696d672e69636f6e73382e636f6d2f636f6c6f722f34382f3030303030302f6a6176617363726970742e706e67"
+              alt="javascript"
+            />
+            <img
+              src="https://camo.githubusercontent.com/5b05ec0bed69d097e594b4657911509baea57d1b/68747470733a2f2f696d672e69636f6e73382e636f6d2f636f6c6f722f34382f3030303030302f6e6f64656a732e706e67"
+              alt="node"
+            />
+
+            <img
+              src="https://camo.githubusercontent.com/8047c55d98eaf34fcfeae45ff259216f65ed16fb/68747470733a2f2f6775696465732e727562796f6e7261696c732e6f72672f696d616765732f66617669636f6e2e69636f"
+              alt="rails"
+            />
           </div>
         </section>
 
