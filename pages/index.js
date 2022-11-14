@@ -55,9 +55,33 @@ export default function Home() {
         <section id="portfolio" className="two">
           <div className="container">
             <header>
-              <h2>See my projects</h2>
+              <h2>See my projects s</h2>
             </header>
 
+            <script
+              dangerouslySetInnerHTML={{__html: `
+                (function (w, d, s, o, f, js, fjs) {
+                  w[o] =
+                      w[o] ||
+                      function () {
+                          (w[o].q = w[o].q || []).push(arguments);
+                      };
+                  (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+                  js.id = o;
+                  js.src = f;
+                  js.async = 1;
+                  fjs.parentNode.insertBefore(js, fjs);
+              })(window, document, "script", "_hw", "https://two-dots-embedded-storefront.s3.amazonaws.com/widget.js");
+              _hw("init", {
+                  element: "mfp-store",
+                  popupPosition: "right",
+                  storefrontType: "slider",
+                  partnerId: 19,
+              });
+              `}}
+            />
+
+            <div id="mfp-store"></div>
             <div className="row">
               {allProjects.map(proj => (
                 <Project
